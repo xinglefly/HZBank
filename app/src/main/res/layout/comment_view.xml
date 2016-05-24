@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.byteera.bank.widget.ImeEditText
+        android:id="@+id/et_comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_weight="1"
+        android:background="@drawable/comment_pop_shape"
+        android:textSize="@dimen/font_small3_size"
+        android:hint="请写下你的评论"
+        android:height="@dimen/margin4"
+        android:padding="@dimen/margin0.5"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/margin0.5"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="@dimen/margin0.5"
+        android:textColor="@color/gray_text"
+        android:text="评论"/>
+</LinearLayout>

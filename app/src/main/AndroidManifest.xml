@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.byteera"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name=".bank.MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/bank_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".bank.activity.login.SelectAddressActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.byteera.bank.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".bank.activity.login.SplashActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".bank.activity.contact.ContactDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.byteera.bank.activity.login.LoginActivity"/>
+        <activity android:name="com.byteera.bank.activity.RegisterActivity"/>
+        <activity android:name=".bank.activity.NewWorkingGroupActivity"/>
+        <activity android:name=".bank.activity.ChatActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.byteera.bank.activity.AddContactActivity"/>
+        <activity android:name=".bank.activity.chatgroup.GroupDetailsActivity"/>
+        <activity android:name=".bank.activity.chatgroup.GroupsActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".bank.activity.NewMeetingGroupActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.byteera.bank.activity.ExitGroupDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom"/>
+        <activity
+            android:name=".bank.activity.chatgroup.GroupPickContactsActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.byteera.bank.activity.NewFriendsMsgActivity"/>
+        <activity android:name="com.byteera.bank.activity.ForwardMessageActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.byteera.bank.activity.ContextMenu"
+            android:theme="@style/MyDialogStyle"/>
+        <activity android:name="com.byteera.bank.activity.AlertDialog"
+            android:theme="@style/MyDialogStyle"/>
+        <activity android:name="com.byteera.bank.activity.ShowBigImage"/>
+        <activity android:name="com.byteera.bank.activity.ShowNormalFileActivity"/>
+        <activity android:name="com.byteera.bank.activity.PublicGroupsActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.byteera.bank.activity.voice.VoiceCallActivity"/>
+        <activity android:name=".bank.activity.chatgroup.GroupSimpleDetailActivity" />
+        <activity android:name="com.byteera.bank.activity.ShowVideoActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.byteera.bank.activity.ImageGridActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.byteera.bank.activity.RecorderVideoActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.byteera.bank.activity.chatgroup.GroupErWeiMaActivity"/>
+        <activity android:name="com.byteera.bank.activity.contact.HuiYiQunActivity"/>
+        <activity android:name="com.byteera.bank.activity.setting.SettingActivity"/>
+        <activity android:name="com.byteera.bank.activity.setting.MessageNotifyActivity"/>
+        <activity android:name="com.byteera.bank.activity.setting.MyBasicInformationActivity"/>
+        <activity android:name="com.byteera.bank.activity.setting.DimensionCodeActivity"/>
+        <activity android:name="com.byteera.bank.activity.setting.UpdatePwdActivity"/>
+        <activity android:name="com.byteera.bank.activity.enterprise.MeetingCircleActivity"/>
+        <activity android:name="com.byteera.bank.activity.enterprise.MeetingDocument"/>
+        <activity android:name="com.byteera.bank.activity.enterprise.MettingContent"/>
+        <activity android:name="com.byteera.bank.activity.WebViewActivity"/>
+        <activity android:name="com.byteera.bank.activity.business_circle.activity.activity.ShowAllPhotoActivity"/>
+        <activity android:name="com.byteera.bank.activity.VerticalCaptureActivity"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.byteera.bank.activity.contact.FriendNewRequest"/>
+        <activity android:name="com.byteera.bank.activity.business_circle.activity.activity.PublishDynamicActivity"/>
+        <activity android:name="com.byteera.bank.activity.business_circle.activity.activity.AlbumActivity"/>
+        <activity android:name="com.byteera.bank.activity.business_circle.activity.activity.ImagePagerActivity"/>
+        <activity android:name="com.byteera.bank.activity.business_circle.activity.activity.ImageFileActivity"/>
+        <activity android:name="com.byteera.bank.activity.business_circle.activity.activity.GalleryActivity"/>
+        <receiver android:name="com.easemob.chat.StartServiceReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.easemob.chat.EMChatService" />
+
+        <!-- 杭州银行 -->
+        <!--<meta-data-->
+            <!--android:name="EASEMOB_API_URL"-->
+            <!--android:value="60.191.59.19:5296"/>-->
+        <!--<meta-data-->
+            <!--android:name="EASEMOB_CHAT_ADDRESS"-->
+            <!--android:value="60.191.59.19"/>-->
+        <!--<meta-data-->
+            <!--android:name="EASEMOB_CHAT_PORT"-->
+            <!--android:value="5222"/>-->
+        <!--<meta-data-->
+            <!--android:name="EASEMOB_APPKEY"-->
+            <!--android:value="easemob-demo#easemobchat"/>-->
+
+        <!-- 开发测试环境 -->
+        <meta-data
+            android:name="EASEMOB_API_URL"
+            android:value="dev.zijieshidai.com:8880"/>
+        <meta-data
+            android:name="EASEMOB_CHAT_ADDRESS"
+            android:value="dev.zijieshidai.com"/>
+        <meta-data
+            android:name="EASEMOB_CHAT_PORT"
+            android:value="5222"/>
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="zijieshidai#hzbank"/>
+
+        <!--公有云配置-->
+        <!--<meta-data
+            android:name="EASEMOB_API_URL"
+            android:value="a1.easemob.com"/>
+        <meta-data
+            android:name="EASEMOB_CHAT_ADDRESS"
+            android:value="im1.easemob.com"/>
+        <meta-data
+            android:name="EASEMOB_CHAT_PORT"
+            android:value="5222"/>
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="13811964921#hzbank"/>-->
+    </application>
+
+</manifest>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin1"
+        android:paddingTop="@dimen/margin_small"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_small4_size"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin0.5">
+
+
+        <com.byteera.bank.widget.roundimage.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/margin5"
+            android:layout_height="@dimen/margin5"
+            android:layout_marginLeft="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin_small"
+            android:src="@drawable/default_avatar"
+            app:riv_border_color="#dedfe1"
+            app:riv_border_width="@dimen/margin_small0.1"
+            app:riv_corner_radius="@dimen/margin1.5"
+            app:riv_oval="false" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/unread_msg_number"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin2"
+                android:layout_marginRight="@dimen/margin0.5"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="姓名"
+                android:textColor="#323232"
+                android:textSize="@dimen/font_small6_size" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_small0.4"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin2"
+            android:layout_toRightOf="@id/avatar"
+            android:background="@color/gray"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

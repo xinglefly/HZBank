@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="-13dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bumen"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_small3_size"/>

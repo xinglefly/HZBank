@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/head_view_bg"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/contact_tab_bg">
+
+            <TextView
+                android:id="@+id/title1"
+                style="@style/contact_title_text_style"
+                android:text="联系人"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_small7_size"/>
+
+            <ImageView
+                android:id="@+id/iv_line1"
+                style="@style/contact_title_jianjiao_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_organization"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/contact_tab_bg">
+
+            <TextView
+                android:id="@+id/title2"
+                style="@style/contact_title_text_style"
+                android:text="组织结构"
+                android:textSize="@dimen/font_small7_size"/>
+
+            <ImageView
+                android:id="@+id/iv_line2"
+                style="@style/contact_title_jianjiao_style"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_group_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/contact_tab_bg">
+
+            <TextView
+                android:id="@+id/title3"
+                style="@style/contact_title_text_style"
+                android:text="群聊"
+                android:textSize="@dimen/font_small7_size"/>
+
+            <ImageView
+                android:id="@+id/iv_line3"
+                style="@style/contact_title_jianjiao_style"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.byteera.bank.activity.contact.widget.MyViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

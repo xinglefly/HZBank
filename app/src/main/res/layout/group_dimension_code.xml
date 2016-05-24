@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#748197"
+    android:orientation="vertical">
+
+    <com.byteera.bank.widget.HeadViewMain
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImg="@drawable/back"
+        app:titleName="我的二维码"/>
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="450dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/erweima_bg">
+
+        <com.byteera.bank.widget.roundimage.RoundedImageView
+            android:id="@+id/iv_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/default_avatar"
+            app:riv_border_color="#d0d0d0"
+            app:riv_border_width="1px"
+            app:riv_corner_radius="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_head"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="fjdkfj"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_small7_size"/>
+
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/iv_head"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ermeima_biankuang"
+            android:padding="5dp"
+            android:scaleType="centerCrop"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="20dp"
+            android:text="扫描上面的二维码加入该群"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

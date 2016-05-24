@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/head_view_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="会话"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small8_size"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/iv_jiahao"
+            android:padding="10dp"
+            android:src="@drawable/conversation_search"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/iv_jiahao"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:src="@drawable/conversation_jiahao"/>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/search_bar"
+        android:visibility="gone"/>
+
+    <com.byteera.bank.widget.MySwipeRefreshLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/head_view">
+
+        <RelativeLayout
+            android:id="@+id/rel_gonggao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/rel_avator"
+                android:layout_width="@dimen/margin6"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/margin4.5"
+                    android:layout_height="@dimen/margin4.5"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/tongzhi"/>
+
+                <TextView
+                    android:id="@+id/unread_msg_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/unread_count_bg"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_small2_size"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/rel_avator"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/rel_avator"
+                android:text="公告.通知"
+                android:textColor="@color/sanqi"
+                android:textSize="@dimen/font_small5_size"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin0.5"
+                android:textColor="#888888"
+                android:textSize="@dimen/font_small3_size"/>
+
+            <ImageView
+                android:id="@+id/msg_state"
+                android:layout_width="@dimen/margin2"
+                android:layout_height="@dimen/margin2"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin0.5"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_toRightOf="@id/rel_avator"
+                android:src="@drawable/msg_state_fail_resend"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="@dimen/margin8"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_toLeftOf="@id/time"
+                android:layout_toRightOf="@id/msg_state"
+                android:ellipsize="end"
+                android:padding="@dimen/margin_small"
+                android:singleLine="true"
+                android:textColor="#929292"
+                android:textSize="@dimen/font_small4_size"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin_small0.4"
+                android:layout_below="@id/rel_avator"
+                android:layout_marginLeft="@dimen/margin1"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray"/>
+
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/divider"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin_small"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/gray"
+                android:dividerHeight="1px"/>
+        </RelativeLayout>
+    </com.byteera.bank.widget.MySwipeRefreshLayout>
+</RelativeLayout>

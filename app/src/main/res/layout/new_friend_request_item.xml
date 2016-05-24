@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:padding="@dimen/margin_small">
+
+
+    <com.byteera.bank.widget.roundimage.RoundedImageView
+        android:id="@+id/img_new_request"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin"
+        android:src="@drawable/head_down"
+        app:riv_corner_radius="@dimen/margin1.5"
+        app:riv_oval="false"/>
+
+    <TextView
+        android:id="@+id/tv_requestname"
+        android:layout_width="@dimen/margin20"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:textColor="@color/sanqi"
+        android:textSize="@dimen/font_small5_size"
+        android:layout_alignBottom="@+id/tv_accept"
+        android:layout_alignLeft="@+id/tv_requestmsg"
+        android:layout_alignStart="@+id/tv_requestmsg"
+        android:layout_alignTop="@+id/tv_userid" />
+
+    <TextView
+        android:id="@+id/tv_requestmsg"
+        android:layout_width="@dimen/margin20"
+        android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/img_new_request"
+        android:layout_marginLeft="@dimen/margin1"
+        android:layout_marginTop="@dimen/margin0.5"
+        android:layout_toRightOf="@id/img_new_request"
+        android:focusable="false"
+        android:textColor="#929292"
+        android:textSize="@dimen/font_small4_size"/>
+
+    <TextView
+        android:id="@+id/tv_accept"
+        android:layout_width="@dimen/margin6"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin1"
+        android:background="@drawable/textview_corner"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="接受"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_small5_size"/>
+
+    <TextView
+        android:id="@+id/tv_userid"
+        android:layout_width="@dimen/margin6"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin1"
+        android:background="@drawable/textview_corner"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_small5_size"
+        android:visibility="invisible"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_small0.4"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/img_new_request"
+        android:layout_marginLeft="@dimen/margin1"
+        android:layout_marginTop="@dimen/margin1"
+        android:background="@color/gray"
+        android:visibility="visible"/>
+</RelativeLayout>

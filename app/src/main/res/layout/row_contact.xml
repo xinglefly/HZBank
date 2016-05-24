@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin1"
+        android:paddingTop="@dimen/margin_small"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        >
+
+        <com.byteera.bank.widget.roundimage.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin_small"
+            android:src="@drawable/head_down"
+            app:riv_border_color="#dedfe1"
+            app:riv_border_width="@dimen/margin_small0.1"
+            app:riv_corner_radius="@dimen/margin1.5"
+            app:riv_oval="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/unread_msg_number"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="@dimen/margin0.5"
+                    android:singleLine="true"
+                    android:text="间谍飞哥开始了"
+                    android:textColor="@color/sanqi"
+                    android:textSize="@dimen/font_small5_size"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/signature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin0.5"
+                android:layout_marginTop="@dimen/margin0.5"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#888888"
+                android:textSize="@dimen/font_small3_size"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/unread_msg_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin2"
+            android:background="@drawable/unread_count_bg"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_small2_size"
+            android:visibility="invisible"/>
+
+        <!--<View-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="@dimen/margin_small0.4"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="@dimen/margin2"-->
+        <!--android:layout_toRightOf="@id/avatar"-->
+        <!--android:background="@color/gray"-->
+        <!--android:visibility="visible"/>-->
+
+        <!--<View-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="@dimen/margin_small0.4"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_below="@id/avatar"-->
+        <!--android:layout_marginRight="@dimen/margin2"-->
+        <!--android:layout_marginTop="@dimen/margin_small"-->
+        <!--android:layout_toRightOf="@id/avatar"-->
+        <!--android:background="@color/gray"-->
+        <!--android:visibility="visible"/>-->
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_userid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

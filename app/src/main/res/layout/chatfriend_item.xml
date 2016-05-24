@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin0.5">
+
+    <RelativeLayout
+        android:id="@+id/rel_chat"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@color/white">
+
+        <com.byteera.bank.widget.roundimage.RoundedImageView
+            android:id="@+id/img_chat"
+            android:layout_width="@dimen/margin5"
+            android:layout_height="@dimen/margin5"
+            android:layout_margin="@dimen/margin1"
+            android:src="@drawable/login_icon"
+            app:riv_corner_radius="@dimen/margin1.5"
+            app:riv_oval="false"/>
+
+
+        <TextView
+            android:id="@+id/tv_chattitle"
+            android:layout_width="@dimen/margin20"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_chat"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/img_chat"
+            android:focusable="false"
+            android:singleLine="true"
+            android:text="等级飞机的附加费将诶觉得覅将阿拉法将诶发"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small5_size"/>
+
+
+        <ImageView
+            android:id="@+id/iv_people"
+            android:layout_width="14dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tv_personsize"
+            android:layout_alignTop="@+id/tv_personsize"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/img_chat"
+            android:src="@drawable/iconfont_suoyoulianxiren"/>
+
+        <TextView
+
+            android:id="@+id/tv_personsize"
+            android:layout_width="@dimen/margin10"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_chattitle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/margin0.5"
+            android:layout_toRightOf="@id/iv_people"
+            android:focusable="false"
+            android:padding="@dimen/margin_small"
+            android:text="14人"
+            android:textColor="#b5b5b5"
+            android:textSize="@dimen/font_small3_size"/>
+
+
+        <ImageView
+            android:id="@+id/iv_time"
+            android:layout_width="14dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tv_personsize"
+            android:layout_alignTop="@+id/tv_personsize"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_personsize"
+            android:src="@drawable/iconfont_shijian"/>
+
+        <TextView
+            android:id="@+id/tv_chattime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_chattitle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/margin0.5"
+            android:layout_toRightOf="@id/iv_time"
+            android:drawablePadding="@dimen/margin_small"
+            android:focusable="false"
+            android:padding="@dimen/margin_small"
+            android:text="2014-2-4"
+            android:textColor="#b5b5b5"
+            android:textSize="@dimen/font_small3_size"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin1.5"
+            android:padding="@dimen/margin_small"
+            android:src="@drawable/right_back"/>
+
+        <ImageView
+            android:id="@+id/img_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_small"
+            android:src="@drawable/end"
+            android:visibility="gone"/>
+
+
+        <View
+            android:layout_width="@dimen/margin28"
+            android:layout_height="@dimen/margin_small0.4"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_chattime"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/gray"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+</FrameLayout>

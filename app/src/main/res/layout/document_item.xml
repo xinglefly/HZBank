@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="@dimen/margin_small">
+        <com.byteera.bank.widget.roundimage.RoundedImageView
+            android:id="@+id/img_document"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:src="@drawable/login_icon"
+            app:riv_border_color="#dedfe1"
+            app:riv_border_width="@dimen/margin_small0.1"
+            app:riv_corner_radius="@dimen/margin1.5"
+            app:riv_oval="false"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="@dimen/margin20"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/img_document"
+            android:focusable="false"
+            android:text="杭州会议"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small6_size"/>
+
+        <ProgressBar
+            android:id="@+id/pb_download"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/margin16"
+            android:layout_height="@dimen/margin_small"
+            android:layout_below="@id/tv_title"
+            android:layout_marginLeft="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@id/img_document"
+            android:focusable="false"
+            android:indeterminate="false"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="@dimen/margin5"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin1"
+            android:background="@drawable/textview_corner"
+            android:gravity="center"
+            android:text="阅读"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small4_size"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

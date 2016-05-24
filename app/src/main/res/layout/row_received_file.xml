@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin1">
+
+    <TextView
+        android:textColor="@color/sanqi"
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity"
+        android:paddingRight="@dimen/margin2">
+
+
+        <com.byteera.bank.widget.roundimage.RoundedImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="@dimen/margin5"
+            android:layout_height="@dimen/margin5"
+            android:layout_alignParentLeft="true"
+           android:layout_below="@+id/tv_userid"
+            android:layout_marginLeft="@dimen/margin0.5"
+            android:src="@drawable/default_avatar"
+            app:riv_corner_radius="@dimen/margin1.5"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tv_userid"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small2_size"/>
+
+        <LinearLayout
+            android:layout_alignTop="@+id/iv_userhead"
+            android:id="@+id/ll_file_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:layout_toLeftOf="@+id/pb_sending"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:background="@drawable/chatfrom_bg">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin0.5"
+                android:src="@drawable/chat_item_file" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin0.5"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/sanqi"
+                    android:id="@+id/tv_file_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=""
+                    android:textSize="@dimen/font_small5_size" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                    <TextView
+                        android:id="@+id/tv_file_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#818181"
+                        android:textSize="@dimen/font_small4_size" />
+
+                    <TextView
+                        android:textColor="@color/sanqi"
+                        android:id="@+id/tv_file_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="未下载"
+                        android:textSize="@dimen/font_small4_size" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_sending"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="@dimen/margin3"
+            android:layout_height="@dimen/margin3"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rel_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin0.5">
+
+    <TextView
+        android:id="@+id/tv_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin1"
+        android:text="会议动态"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_small4_size"
+        android:visibility="gone"/>
+
+    <com.byteera.bank.widget.roundimage.RoundedImageView
+        android:id="@+id/img_title"
+        android:layout_width="@dimen/margin5"
+        android:layout_height="@dimen/margin5"
+        android:layout_below="@id/tv_dynamic"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:src="@drawable/head_down"
+        app:riv_corner_radius="@dimen/margin1.5"
+        app:riv_oval="false"/>
+
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_title"
+        android:layout_below="@id/tv_dynamic"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/img_title"
+        android:text="王行长"
+        android:textColor="@color/sanqi"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_username"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/img_title"
+        android:maxLines="999"
+        android:text="显示内容"
+        android:textColor="#5b5b5b"
+        android:textSize="@dimen/font_small4_size"/>
+
+    <com.byteera.bank.activity.business_circle.activity.widget.NoScrollGridView
+        android:id="@+id/gv_gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin1"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/img_title"
+        android:horizontalSpacing="@dimen/margin0.5"
+        android:numColumns="3"
+        android:verticalSpacing="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gv_gridview"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/img_title"
+        android:text="15:54"
+        android:textColor="#b5b5b5"
+        android:textSize="@dimen/font_small3_size"/>
+
+    <TextView
+        android:id="@+id/img_revert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/gv_gridview"
+        android:layout_marginRight="@dimen/margin1"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/comment"
+        android:drawablePadding="@dimen/margin0.5"
+        android:text="12"
+        android:textColor="#b5b5b5"
+        android:textSize="@dimen/font_small3_size"/>
+
+    <com.byteera.bank.activity.enterprise.RevertListView
+        android:id="@+id/lv_revert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_revert"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin1"
+        android:layout_toRightOf="@+id/img_title"
+        android:background="@drawable/reply_all"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhicai="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:gravity="center_horizontal">
+
+    <com.byteera.bank.widget.HeadViewMain
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        zhicai:leftImg="@drawable/back"
+        zhicai:titleName="行银会议" />
+
+    <!--到时间用自定义属性替换-->
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin6"
+        android:layout_below="@id/head_view"
+        android:background="#ffffff"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rl_discuss_group"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin1"
+                android:src="@drawable/discuss_group" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:text="创建讨论组"
+                android:textColor="#1889cf"
+                android:textSize="@dimen/font_small4_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_metting_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_mettingcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin1"
+                android:src="@drawable/metting_cotent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:text="会议概况"
+                android:textColor="#1889cf"
+                android:textSize="@dimen/font_small4_size" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_document"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin1"
+                android:src="@drawable/metting_document" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:text="会议资料"
+                android:textColor="#1889cf"
+                android:textSize="@dimen/font_small4_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_dynamic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin1"
+                android:src="@drawable/dynamic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:text="发表动态"
+                android:textColor="#1889cf"
+                android:textSize="@dimen/font_small4_size" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_divid"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/ll_view"
+        android:background="@color/gray" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/empty_item" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="这里怎么空空的\n来，赶快去发个动态吧"
+            android:textSize="@dimen/font_small4_size" />
+    </LinearLayout>
+
+    <com.byteera.bank.activity.business_circle.activity.widget.ZhiCaiLRefreshListView
+        android:id="@+id/lv_chat"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_divid"
+        android:background="#f8f8f8" />
+
+    <RelativeLayout
+        android:id="@+id/rel_discussion"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin4"
+        android:layout_alignParentBottom="true"
+        android:background="#36a3e9"
+        android:padding="@dimen/margin_small">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin2.5"
+            android:src="@drawable/group_chat" />
+
+        <TextView
+            android:id="@+id/tv_g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv"
+            android:drawablePadding="@dimen/margin1"
+            android:gravity="center"
+            android:text="进入群组讨论"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_small6_size" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin2.5"
+            android:layout_marginRight="@dimen/margin2"
+            android:src="@drawable/jinru" />
+    </RelativeLayout>
+
+    <com.byteera.bank.widget.CommentView
+        android:id="@+id/comment_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_pop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ecf4f9">
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin1"
+        android:text="参会人员"
+        android:textColor="#929292"
+        android:textSize="@dimen/font_small4_size" />
+
+    <RelativeLayout
+        android:id="@+id/rel_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name">
+
+        <com.byteera.bank.widget.ExpandGridView
+            android:id="@+id/gridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin3"
+            android:background="#ecf4f9"
+            android:horizontalSpacing="@dimen/margin_small1"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="6"
+            android:paddingBottom="@dimen/margin0.5"
+            android:paddingLeft="@dimen/margin1"
+            android:paddingTop="@dimen/margin0.5"
+            android:verticalSpacing="@dimen/margin1" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/margin3"
+            android:layout_height="@dimen/margin2.5"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/margin0.5"
+            android:padding="@dimen/margin0.5"
+            android:src="@drawable/right_back" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel_gridview"
+        android:layout_margin="@dimen/margin1"
+        android:text="会议简介"
+        android:textColor="#929292"
+        android:textSize="@dimen/font_small4_size" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_intro"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin2.5"
+        android:layout_marginRight="@dimen/margin2"
+        android:background="@drawable/textview_corner_nocolor"
+        android:padding="@dimen/margin0.5"
+        android:text="在Android可能更新Activity中视图比较方便，即使数据比较多，使用Handler和Thread基本上没什么问题，可以Fragment就不一样了，更新比较麻烦。因为在Android中Fragment不会像Activity是一个单独的组件，可以单独存在，Fragment的存在需要Activity作为容器，相当于把Fragment依附(attach)在Activity中显示。"
+        android:textColor="#343434"
+        android:textSize="@dimen/font_small4_size" />
+
+
+</RelativeLayout>

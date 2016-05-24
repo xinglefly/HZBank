@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/img_head_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="-1dp"
+        android:background="@drawable/detail_bg"/>
+
+    <RelativeLayout
+
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="用户详情"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+
+    <com.byteera.bank.widget.roundimage.RoundedImageView
+        android:id="@+id/img_header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/img_head_bg"
+        android:layout_marginLeft="@dimen/margin1.5"
+        android:layout_marginRight="@dimen/margin1"
+        android:layout_marginTop="@dimen/margin_3.5"
+        android:src="@drawable/default_avatar"
+        app:riv_border_color="@color/white"
+        app:riv_border_width="4dp"
+        app:riv_corner_radius="20dp"
+        app:riv_oval="false"/>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_depart"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin0.5"
+        android:layout_toRightOf="@id/img_header"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_small8_size"/>
+
+    <TextView
+        android:id="@+id/tv_depart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_head_bg"
+        android:layout_marginLeft="@dimen/margin0.5"
+        android:layout_toRightOf="@id/img_header"
+        android:minHeight="@dimen/margin3"
+        android:textColor="#6f6f6f"
+        android:textSize="@dimen/font_small5_size"/>
+
+    <View
+        android:id="@+id/view_divide"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:layout_below="@id/tv_depart"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin1.5"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/tv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin3.5"
+        android:layout_below="@id/view_divide"
+        android:layout_margin="@dimen/margin0.5"
+        android:drawableLeft="@drawable/mine_zhanghao"
+        android:drawablePadding="15dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin1"
+        android:text="操作员号："
+        android:textColor="@color/sanqi"
+        android:textSize="@dimen/font_small6_size"/>
+
+    <TextView
+        android:id="@+id/tv_account_value"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin3.5"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/view_divide"
+        android:layout_margin="@dimen/margin0.5"
+        android:background="@android:color/white"
+        android:gravity="center|right"
+        android:paddingRight="8dp"
+        android:textColor="#b5b5b5"
+        android:textSize="@dimen/font_small4_size"/>
+
+    <View
+        android:id="@+id/tv_divide"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:layout_below="@id/tv_account"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin3.5"
+        android:layout_below="@id/tv_divide"
+        android:layout_margin="@dimen/margin0.5"
+        android:drawableLeft="@drawable/mine_phone"
+        android:drawablePadding="20dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin1"
+        android:text="手机："
+        android:textColor="@color/sanqi"
+        android:textSize="@dimen/font_small6_size"/>
+
+    <TextView
+        android:id="@+id/tv_phone_value"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin3.5"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_divide"
+        android:layout_margin="@dimen/margin0.5"
+        android:background="@android:color/white"
+        android:gravity="center|right"
+        android:paddingRight="8dp"
+        android:textColor="#b5b5b5"
+        android:textSize="@dimen/font_small4_size"/>
+
+
+    <View
+        android:id="@+id/tv_divide2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:layout_below="@id/tv_phone"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/tv_telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin3.5"
+        android:layout_below="@id/tv_divide2"
+        android:layout_margin="@dimen/margin0.5"
+        android:drawableLeft="@drawable/mine_telephone"
+        android:drawablePadding="15dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin1"
+        android:text="座机："
+        android:textColor="@color/sanqi"
+        android:textSize="@dimen/font_small6_size"/>
+
+    <TextView
+        android:id="@+id/tv_telephone_value"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin3.5"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_divide2"
+        android:layout_margin="@dimen/margin0.5"
+        android:background="@android:color/white"
+        android:gravity="center|right"
+        android:paddingRight="8dp"
+        android:textColor="#b5b5b5"
+        android:textSize="@dimen/font_small4_size"/>
+
+
+    <View
+        android:id="@+id/tv_divide3"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:layout_below="@id/tv_telephone"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin3.5"
+        android:layout_below="@id/tv_divide3"
+        android:layout_margin="@dimen/margin0.5"
+        android:drawableLeft="@drawable/mine_youxiang"
+        android:drawablePadding="15dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin1"
+        android:text="邮箱："
+        android:textColor="@color/sanqi"
+        android:textSize="@dimen/font_small6_size"/>
+
+    <TextView
+        android:id="@+id/tv_email_value"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin3.5"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_divide3"
+        android:layout_margin="@dimen/margin0.5"
+        android:background="@android:color/white"
+        android:gravity="center|right"
+        android:paddingRight="8dp"
+        android:textColor="#b5b5b5"
+        android:textSize="@dimen/font_small4_size"/>
+
+    <View
+        android:id="@+id/fff"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:layout_below="@id/tv_email"
+        android:background="@color/gray"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fff"
+        />
+
+    <TextView
+        android:id="@+id/tv_openchat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_email_value"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="40dp"
+        android:background="@color/common_top_bar_blue"
+        android:gravity="center"
+        android:padding="@dimen/margin"
+        android:text="开始聊天"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_small5_size"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_addfriend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_openchat"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_top_bar_blue"
+        android:gravity="center"
+        android:padding="@dimen/margin"
+
+        android:text="邀请好友成为联系人"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_small5_size"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_deletefriend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_addfriend"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:padding="@dimen/margin"
+        android:text="解除好友关系"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_small5_size"
+        android:visibility="gone"
+        />
+</RelativeLayout>

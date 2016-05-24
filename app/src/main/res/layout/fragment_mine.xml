@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin25"
+        android:background="@drawable/head_view_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="我的"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+        <FrameLayout
+            android:id="@+id/fl_mine_photo"
+            android:layout_width="@dimen/margin13"
+            android:layout_height="@dimen/margin13"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mine_photo_round_shape">
+            <com.byteera.bank.widget.roundimage.RoundedImageView
+                android:id="@+id/iv_mine_photo"
+                android:layout_width="@dimen/margin12"
+                android:layout_height="@dimen/margin12"
+                android:layout_gravity="center"
+                app:riv_border_color="#dedfe1"
+                app:riv_corner_radius="20dp"
+                app:riv_oval="false"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mine_gongzuoquan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin1"
+        android:paddingRight="@dimen/margin1"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/margin2.5"
+            android:layout_height="@dimen/margin2.5"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin2"
+            android:src="@drawable/mine_gongzuoquan"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin5"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="工作圈"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_small5_size"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/mine_detail"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_mine_erweima"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin1"
+        android:paddingRight="@dimen/margin1">
+
+        <ImageView
+            android:layout_width="@dimen/margin2.5"
+            android:layout_height="@dimen/margin2.5"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin2"
+            android:src="@drawable/mine_erweima"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin5"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="二维码"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small5_size"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/right_back"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:background="@color/btn_gray_normal"/>
+
+    <LinearLayout
+        android:id="@+id/ll_mine_jibenxinxi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin1"
+        android:paddingRight="@dimen/margin1">
+
+        <ImageView
+            android:layout_width="@dimen/margin2.5"
+            android:layout_height="@dimen/margin2.5"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin2"
+            android:src="@drawable/mine_jibenxinxi"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin5"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="基本信息"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small5_size"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/right_back"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:background="@color/btn_gray_normal"/>
+
+    <LinearLayout
+        android:id="@+id/ll_mine_setting"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin1"
+        android:paddingRight="@dimen/margin1">
+
+        <ImageView
+            android:layout_width="@dimen/margin2.5"
+            android:layout_height="@dimen/margin2.5"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin2"
+            android:src="@drawable/mine_shezhi"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin5"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="设置"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small5_size"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/right_back"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:background="@color/btn_gray_normal"/>
+</LinearLayout>

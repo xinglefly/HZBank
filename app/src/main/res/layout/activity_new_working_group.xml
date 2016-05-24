@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:zhicai="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#F6F6F6"
+              android:orientation="vertical">
+
+
+    <com.byteera.bank.widget.HeadViewMain
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        zhicai:leftImg="@drawable/back"
+        zhicai:titleName="新建工作群组"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin7"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin1"
+            android:text="讨论组名称:"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small6_size"/>
+
+        <EditText
+            android:id="@+id/edit_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin3.5"
+            android:layout_margin="@dimen/margin1"
+            android:background="@drawable/talk_bg"
+            android:hint="为讨论组取个给力的名字吧！"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="#b5b5b5"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/font_small4_size"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:background="@color/gray"/>
+
+    <EditText
+        android:id="@+id/edit_group_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin1"
+        android:layout_marginLeft="@dimen/margin1"
+        android:layout_marginRight="@dimen/margin1"
+        android:background="@drawable/button_normal_shape"
+        android:gravity="top"
+        android:hint="群组简介"
+        android:lines="5"
+        android:paddingLeft="@dimen/margin0.5"
+        android:paddingTop="@dimen/margin0.5"
+        android:textSize="@dimen/font_small6_size"
+        android:visibility="gone"/>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin5"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin1"
+            android:layout_weight="1"
+            android:text="讨论组权限"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small6_size"/>
+
+        <TextView
+            android:id="@+id/tv_quanxian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:text="公开群"
+            android:textColor="#b5b5b5"
+            android:textSize="@dimen/font_small4_size"/>
+
+        <com.byteera.bank.widget.SwitchView
+            android:id="@+id/cb_public"
+            android:layout_width="@dimen/margin4"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin0.5"
+            android:layout_marginRight="@dimen/margin0.5"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:id="@+id/ll_open_invite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin5"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin1"
+            android:layout_weight="1"
+            android:text="成员邀请权限"
+            android:textColor="@color/sanqi"
+            android:textSize="@dimen/font_small6_size"/>
+
+        <TextView
+            android:id="@+id/tv_yaoqing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="允许群成员邀请其他人"
+            android:textColor="#b5b5b5"
+            android:textSize="@dimen/font_small4_size"/>
+
+        <com.byteera.bank.widget.SwitchView
+            android:id="@+id/cb_member_inviter"
+            android:layout_width="@dimen/margin4"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin0.5"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:background="@color/gray"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin5"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/sanqi"
+        android:textSize="@dimen/font_small6_size"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_small0.4"
+        android:background="@color/gray"/>
+
+</LinearLayout>

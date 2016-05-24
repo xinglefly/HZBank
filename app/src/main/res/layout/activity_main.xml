@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fbfbfb">
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_divid" />
+
+    <View
+        android:id="@+id/view_divid"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/main_bottom"
+        android:background="#b2b2b2" />
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eefbfbfb"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="2dp">
+
+        <RelativeLayout
+            android:id="@+id/btn_container_conversation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onTabClicked">
+
+            <ImageView
+                android:id="@+id/iv_chat"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/tab_chat_bg" />
+
+            <TextView
+                android:id="@+id/btn_conversation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_chat"
+                android:background="#00000000"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:text="会话"
+                android:textColor="#969696"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/unread_msg_number"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_toRightOf="@+id/iv_chat"
+                android:src="@drawable/unread_count_bg"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <!-- 通讯录隐藏 -->
+        <RelativeLayout
+            android:id="@+id/btn_container_address_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/tab_contact_list_bg"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="通讯录"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/unread_address_number"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/unread_count_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:text="7"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="12sp"-->
+            <!--android:visibility="invisible"/>-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_contact"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onTabClicked">
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/tab_contact_list_bg" />
+
+            <TextView
+                android:id="@+id/btn_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_message"
+                android:background="#00000000"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="通讯录"
+                android:textColor="#969696"
+
+                android:textSize="11sp" />
+
+
+            <ImageView
+                android:id="@+id/unread_contact_number"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_toRightOf="@+id/iv_message"
+                android:src="@drawable/unread_count_bg"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_enterprise"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onTabClicked">
+
+            <ImageView
+                android:id="@+id/iv_huiwu"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/tab_office_list_bg" />
+
+            <TextView
+                android:id="@+id/btn_enterprise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_huiwu"
+                android:background="#00000000"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="会务圈"
+                android:textColor="#969696"
+                android:textSize="11sp" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/unread_enterprise_number"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/unread_count_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:text="7"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="12sp"-->
+            <!--android:visibility="invisible"/>-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onTabClicked">
+
+            <ImageView
+                android:id="@+id/iv_mine"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/tab_setting_bg" />
+
+            <TextView
+                android:id="@+id/btn_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_mine"
+                android:background="#00000000"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:text="我"
+                android:textColor="#969696"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

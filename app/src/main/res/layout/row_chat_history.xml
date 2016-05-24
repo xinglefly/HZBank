@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/list_item_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+        <com.byteera.bank.widget.roundimage.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/default_avatar"
+            app:riv_corner_radius="@dimen/margin1.5"
+            app:riv_oval="false"/>
+        <GridView
+            android:id="@+id/gridview_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/grid_bg"
+            android:columnWidth="12dp"
+            android:numColumns="3"
+            android:padding="3dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="3dp"/>
+
+        <TextView
+            android:id="@+id/unread_msg_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/unread_count_bg"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_small2_size"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/avatar_container"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/avatar_container"
+        android:text="fjdkafjl"
+        android:textColor="@color/sanqi"
+        android:textSize="@dimen/font_small5_size"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/name"
+        android:layout_marginRight="@dimen/margin"
+        android:text="fdjhkfhk"
+        android:textColor="#929292"
+        android:textSize="@dimen/font_small3_size"/>
+
+    <ImageView
+        android:id="@+id/msg_state"
+        android:layout_width="@dimen/margin2"
+        android:layout_height="@dimen/margin2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin0.5"
+        android:layout_toRightOf="@id/avatar_container"
+        android:src="@drawable/msg_state_fail_resend"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
+        android:layout_toLeftOf="@id/time"
+        android:layout_toRightOf="@id/msg_state"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="最后一条消息"
+        android:textColor="#929292"
+        android:textSize="@dimen/font_small3_size"/>
+    <!--<View-->
+    <!--android:id="@+id/divider"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="@dimen/margin_small0.4"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_below="@id/avatar_container"-->
+    <!--android:layout_marginBottom="@dimen/margin_small"-->
+    <!--android:layout_marginTop="@dimen/margin1"-->
+    <!--android:background="@color/gray"/>-->
+</RelativeLayout>

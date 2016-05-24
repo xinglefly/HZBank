@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView
+    android:id="@+id/list_viewww"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:divider="@color/gray"
+    android:dividerHeight="1px"
+    android:fadeScrollbars="true"
+    android:footerDividersEnabled="false"
+    android:overScrollMode="never"
+    android:scrollingCache="false"/><!-- From: file:/C:/Users/zhenxing/Desktop/newApp/ByteEra/res/layout/list_view.xml -->
